@@ -11,7 +11,7 @@ import org.junit.Test;
 import java.io.InputStream;
 
 public class UserMapperTest {
-    // 指定MyBatis配置文件
+
     final String RESOURCE = "mybatis-config.xml";
     SqlSessionFactory sessionFactory = null;
 
@@ -19,9 +19,9 @@ public class UserMapperTest {
     public void before() {
         try {
 
-            // 1、指定MyBaties配置文件
+            // 1
             InputStream inputstream = Resources.getResourceAsStream(RESOURCE);
-            // 2、创建SqlSessionFactory()
+            // 2
             sessionFactory = new SqlSessionFactoryBuilder().build(inputstream);
         } catch (Exception e) {
             e.printStackTrace();
@@ -30,12 +30,11 @@ public class UserMapperTest {
 
     @Test
     public void test() {
-
-        // 3、获取SqlSession
+        // 3
         SqlSession session = sessionFactory.openSession();
         UserMapper userMapper = session.getMapper(UserMapper.class);
         User user = userMapper.selectByPrimaryKey(1L);
-        System.out.println(String.format("userId:%s,userName:%s,age:%s", user.getId(), user.getUserName(), user.getAge()));
+        System.out.println(String.format("userId:%s,userName:%s,nickname:%s", user.getId(), user.getUsername(), user.getNickname()));
     }
 
 }

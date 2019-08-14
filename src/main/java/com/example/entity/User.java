@@ -3,14 +3,65 @@ package com.example.entity;
 import java.util.Date;
 
 public class User {
+    /**
+     * 主键ID
+     */
     private Long id;
-    private String userId;
-    private String userName;
-    private Integer age;
+
+    /**
+     * 用户名
+     */
+    private String username;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 密码盐
+     */
+    private String salt;
+
+    /**
+     * 用户昵称
+     */
+    private String nickname;
+
+    /**
+     * 真实姓名
+     */
+    private String realName;
+
+    /**
+     * 手机号
+     */
+    private String phone;
+
+    /**
+     * 邮箱
+     */
     private String email;
+
+    /**
+     * 添加时间
+     */
     private Date addTime;
+
+    /**
+     * 添加时间
+     */
+    private Date lastLoginTime;
+
+    /**
+     * 修改时间
+     */
     private Date modifyTime;
-    private Integer isDel;
+
+    /**
+     * 是否删除:0-不删除；1-删除
+     */
+    private Integer isDelete;
 
     public Long getId() {
         return id;
@@ -20,28 +71,52 @@ public class User {
         this.id = id;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {
@@ -60,6 +135,14 @@ public class User {
         this.addTime = addTime;
     }
 
+    public Date getLastLoginTime() {
+        return lastLoginTime;
+    }
+
+    public void setLastLoginTime(Date lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
+    }
+
     public Date getModifyTime() {
         return modifyTime;
     }
@@ -68,11 +151,11 @@ public class User {
         this.modifyTime = modifyTime;
     }
 
-    public Integer getIsDel() {
-        return isDel;
+    public Integer getIsDelete() {
+        return isDelete;
     }
 
-    public void setIsDel(Integer isDel) {
-        this.isDel = isDel;
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
     }
 }
